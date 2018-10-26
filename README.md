@@ -7,7 +7,7 @@ Raspberry Pi FanControl Service
 
 1. Download program and place it into /opt folder
 ```
-sudo wget https://raw.githubusercontent.com/vgooz/FanControl/master/fancontrol.py /opt/fancontrol.py`
+sudo wget https://raw.githubusercontent.com/vgooz/FanControl/master/fancontrol.py /opt/fancontrol.py
 sudo chmod 774 /opt/fancontrol.py
 ```
 2. Install GPIO python library for Python 2.7
