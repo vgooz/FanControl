@@ -18,8 +18,10 @@ sudo apt-get install python-dev
 sudo pip install rpi.gpio
 ```
 3. Create fancontrol.service file with following text below
+
+`sudo nano /etc/systemd/system/fancontrol.service`
+
 ```
-sudo nano /etc/systemd/system/fancontrol.service
 [Unit]
 Description=run fan when hot
 After=meadiacenter.service
