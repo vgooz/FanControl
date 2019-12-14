@@ -52,4 +52,5 @@ sudo apt-get install sysbench
 sysbench --num-threads=4 --test=cpu --cpu-max-prime=200000 --validate run
 ```
 7. Keep script runing after logout in the terminal
+
 `nohup python fancontrol.py &`
