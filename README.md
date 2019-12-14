@@ -10,14 +10,18 @@ Raspberry Pi FanControl Service
 sudo wget https://raw.githubusercontent.com/vgooz/FanControl/master/fancontrol.py /opt/fancontrol.py
 sudo chmod 774 /opt/fancontrol.py
 ```
-2. Install GPIO python library for Python 2.7
+2. Update Python setuptools
+
+`sudo pip3 install --upgrade setuptools`
+
+3. Install GPIO python library for Python 2.7
 ```
 sudo apt-get install build-essential
 sudo pip install wheel
 sudo apt-get install python-dev
 sudo pip install rpi.gpio
 ```
-3. Create fancontrol.service file with following text below
+4. Create fancontrol.service file with following text below
 
 `sudo nano /etc/systemd/system/fancontrol.service`
 
@@ -36,14 +40,16 @@ Restart=always
 [Install]
 WantedBy=multi-user.target
 ```
-4. Register and enable FanControl service
+5. Register and enable FanControl service
 ```
 sudo systemctl enable fancontrol
 sudo systemctl start fancontrol
 sudo systemctl status fancontrol
 ```
-5. Use sysbench for CPU hiting
+6. Use sysbench for CPU hiting
 ```
 sudo apt-get install sysbench
 sysbench --num-threads=4 --test=cpu --cpu-max-prime=200000 --validate run
 ```
+7. Keep script runing after logout in the terminal
+`nohup python fancontrol.py &`
