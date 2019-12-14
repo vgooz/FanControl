@@ -7,7 +7,7 @@ Raspberry Pi FanControl Service
 
 1. Download program and place it into /opt folder
 ```
-sudo wget -P /opt/fancontrol.py https://raw.githubusercontent.com/vgooz/FanControl/master/fancontrol.py
+sudo wget -P /opt https://raw.githubusercontent.com/vgooz/FanControl/master/fancontrol.py
 sudo chmod 774 /opt/fancontrol.py
 ```
 2. Update Python setuptools
