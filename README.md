@@ -12,6 +12,7 @@ sudo chmod 774 /opt/fancontrol.py
 ```
 2. Update Python setuptools
 
+`sudo apt-get install python-pip`
 `sudo pip install --upgrade setuptools`
 
 3. Install GPIO python library for Python 2.7
